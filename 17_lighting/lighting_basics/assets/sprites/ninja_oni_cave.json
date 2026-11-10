@@ -1,0 +1,65 @@
+{
+  "frames": {
+    "ninja_oni_cave 0": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "duration": 180
+    },
+    "ninja_oni_cave 1": {
+      "frame": {
+        "x": 35,
+        "y": 1,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "duration": 180
+    }
+  },
+  "meta": {
+    "app": "just_sprite_editor (aseprite-compatible)",
+    "version": "1",
+    "image": "ninja_oni_cave.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 68,
+      "h": 34
+    },
+    "scale": "1",
+    "frameTags": [
+      {
+        "name": "walk",
+        "from": 0,
+        "to": 1,
+        "direction": "forward"
+      }
+    ]
+  }
+}

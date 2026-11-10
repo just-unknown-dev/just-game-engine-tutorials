@@ -1,0 +1,13 @@
+{
+  "formatVersion": 2,
+  "kind": "screen",
+  "crt": {
+    "curvature": 0.12,
+    "aberration": 1.5
+  },
+  "scanlines": {
+    "amount": 0.35,
+    "size": 3.0
+  },
+  "vignette": {}
+}

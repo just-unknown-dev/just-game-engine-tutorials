@@ -1,0 +1,10 @@
+{
+  "formatVersion": 2,
+  "kind": "screen",
+  "grade": {
+    "brightness": 0.05,
+    "contrast": 1.15,
+    "saturation": 0.4,
+    "hue": 0.0
+  }
+}
