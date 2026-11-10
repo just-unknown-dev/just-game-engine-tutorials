@@ -1,0 +1,108 @@
+{
+  "version": 11,
+  "name": "level_02",
+  "mode": "2d",
+  "entities": [
+    {
+      "name": "Ground",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": { "position": { "x": 900, "y": 300, "z": 0 } }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": {
+            "width": 2800,
+            "height": 40,
+            "fillStyle": { "color": 4280967018 }
+          }
+        },
+        { "type": "Collider2DComponent", "fields": { "shape": "matchShape" } }
+      ]
+    },
+    {
+      "name": "Ledge",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": { "position": { "x": 400, "y": 80, "z": 0 } }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": { "width": 260, "height": 24, "fillStyle": { "color": 4280967018 } }
+        },
+        { "type": "Collider2DComponent", "fields": { "shape": "matchShape" } }
+      ]
+    },
+    {
+      "name": "Ledge",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": { "position": { "x": 1100, "y": 40, "z": 0 } }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": { "width": 260, "height": 24, "fillStyle": { "color": 4280967018 } }
+        },
+        { "type": "Collider2DComponent", "fields": { "shape": "matchShape" } }
+      ]
+    },
+    {
+      "name": "PlayerSpawn",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": { "position": { "x": -300, "y": 120, "z": 0 } }
+        },
+        { "type": "SpawnComponent", "fields": { "spawner": "player" } }
+      ]
+    },
+    {
+      "name": "EnemySpawn",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": { "position": { "x": 750, "y": 250, "z": 0 } }
+        },
+        { "type": "SpawnComponent", "fields": { "spawner": "enemy" } }
+      ]
+    },
+    {
+      "name": "EnemySpawn",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": { "position": { "x": 1500, "y": 250, "z": 0 } }
+        },
+        { "type": "SpawnComponent", "fields": { "spawner": "enemy" } }
+      ]
+    },
+    {
+      "name": "Goal",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": { "position": { "x": 2100, "y": 220, "z": 0 } }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": { "width": 20, "height": 120, "fillStyle": { "color": 4294276207 } }
+        },
+        { "type": "TagComponent", "fields": { "tags": ["goal"] } }
+      ]
+    },
+    {
+      "name": "MainCamera",
+      "components": [
+        { "type": "TransformComponent", "fields": {} },
+        {
+          "type": "VirtualCameraComponent",
+          "fields": { "follow": { "tag": "player" }, "zoom": 1.4 }
+        },
+        { "type": "CameraFramingComponent", "fields": { "screenY": 0.1 } }
+      ]
+    }
+  ]
+}

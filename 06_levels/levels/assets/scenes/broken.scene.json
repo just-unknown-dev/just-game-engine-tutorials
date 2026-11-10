@@ -1,0 +1,14 @@
+{
+  "version": 11,
+  "name": "broken",
+  "mode": "2d",
+  "entities": [
+    {
+      "name": "Booster",
+      "components": [
+        { "type": "TransformComponent", "fields": {} },
+        { "type": "SpeedBoostComponent", "fields": { "factor": 2 } }
+      ]
+    }
+  ]
+}
