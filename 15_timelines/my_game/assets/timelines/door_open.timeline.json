@@ -1,0 +1,23 @@
+{
+  "formatVersion": 3,
+  "name": "door_open",
+  "duration": 1.0,
+  "wrap": "once",
+  "tracks": [
+    {
+      "kind": "property",
+      "component": "TransformComponent",
+      "field": "position",
+      "channel": "y",
+      "mode": "relative",
+      "keys": [
+        { "t": 0.0, "v": 0.0, "i": "eased", "e": "easeInOutCubic" },
+        { "t": 1.0, "v": -240.0 }
+      ]
+    },
+    {
+      "kind": "event",
+      "events": [{ "time": 1.0, "name": "opened" }]
+    }
+  ]
+}

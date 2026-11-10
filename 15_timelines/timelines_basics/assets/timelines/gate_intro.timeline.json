@@ -1,0 +1,39 @@
+{
+  "formatVersion": 3,
+  "name": "gate_intro",
+  "duration": 7.0,
+  "wrap": "once",
+  "tracks": [
+    {
+      "kind": "cameraShot",
+      "blocks": [{ "start": 1.0, "length": 4.0, "value": "GateCam", "amount": 100 }]
+    },
+    {
+      "kind": "spriteClip",
+      "binding": { "name": "Oni" },
+      "blocks": [{ "start": 2.0, "length": 2.0, "value": "walk" }]
+    },
+    {
+      "kind": "property",
+      "binding": { "name": "Oni" },
+      "component": "TransformComponent",
+      "field": "position",
+      "channel": "x",
+      "mode": "relative",
+      "keys": [
+        { "t": 2.0, "v": 0.0, "i": "linear" },
+        { "t": 4.0, "v": -120.0 }
+      ]
+    },
+    {
+      "kind": "activation",
+      "binding": { "name": "Banner" },
+      "blocks": [{ "start": 4.0, "length": 3.0 }]
+    },
+    {
+      "kind": "event",
+      "events": [{ "time": 5.0, "name": "fight", "signal": true }]
+    }
+  ],
+  "markers": [{ "time": 4.0, "name": "skip" }]
+}
