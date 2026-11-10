@@ -1,0 +1,6 @@
+# Each project has its own .gitignore. These are for the repo's root.
+.DS_Store
+/.dart_tool/
+/.idea/
+*.iml
+*.log
