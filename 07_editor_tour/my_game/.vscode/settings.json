@@ -1,0 +1,9 @@
+{
+  "dart.getFlutterSdkCommand": {
+    "executable": "just",
+    "args": [
+      "sdk",
+      "path"
+    ]
+  }
+}
