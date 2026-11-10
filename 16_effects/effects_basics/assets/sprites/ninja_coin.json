@@ -1,0 +1,149 @@
+{
+  "frames": {
+    "ninja_coin 0": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 16,
+        "h": 16
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "duration": 90
+    },
+    "ninja_coin 1": {
+      "frame": {
+        "x": 19,
+        "y": 1,
+        "w": 16,
+        "h": 16
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "duration": 90
+    },
+    "ninja_coin 2": {
+      "frame": {
+        "x": 37,
+        "y": 1,
+        "w": 16,
+        "h": 16
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "duration": 90
+    },
+    "ninja_coin 3": {
+      "frame": {
+        "x": 55,
+        "y": 1,
+        "w": 16,
+        "h": 16
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "duration": 90
+    },
+    "ninja_coin 4": {
+      "frame": {
+        "x": 73,
+        "y": 1,
+        "w": 16,
+        "h": 16
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "duration": 90
+    },
+    "ninja_coin 5": {
+      "frame": {
+        "x": 91,
+        "y": 1,
+        "w": 16,
+        "h": 16
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "duration": 90
+    }
+  },
+  "meta": {
+    "app": "just_sprite_editor (aseprite-compatible)",
+    "version": "1",
+    "image": "ninja_coin.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 108,
+      "h": 18
+    },
+    "scale": "1",
+    "frameTags": [
+      {
+        "name": "spin",
+        "from": 0,
+        "to": 5,
+        "direction": "forward"
+      }
+    ]
+  }
+}
