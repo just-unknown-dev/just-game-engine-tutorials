@@ -1,0 +1,324 @@
+{
+  "version": 11,
+  "name": "level_01",
+  "mode": "2d",
+  "entities": [
+    {
+      "name": "MainCamera",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 560.0,
+              "y": 600.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "VirtualCameraComponent",
+          "fields": {
+            "priority": 10,
+            "enabled": true,
+            "standbyUpdate": "never",
+            "follow": {
+              "tag": "player"
+            },
+            "zoom": 2.4,
+            "dutch": 0.0,
+            "projection": "orthographic",
+            "fieldOfView": 1.0471975511965976,
+            "nearClip": -10000.0,
+            "farClip": 10000.0
+          }
+        },
+        {
+          "type": "CameraFramingComponent",
+          "fields": {
+            "screenX": 0.0,
+            "screenY": 0.0,
+            "deadZoneWidth": 0.1,
+            "deadZoneHeight": 0.1,
+            "softZoneWidth": 0.8,
+            "softZoneHeight": 0.8,
+            "dampingX": 0.5,
+            "dampingY": 0.5,
+            "lookaheadTime": 0.0,
+            "lookaheadSmoothing": 0.3,
+            "followX": true,
+            "followY": true
+          }
+        },
+        {
+          "type": "CameraConfinerComponent",
+          "fields": {
+            "boundsName": "LevelBounds",
+            "damping": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "LevelBounds",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 2000.0,
+              "y": 400.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "CameraBoundsComponent",
+          "fields": {
+            "width": 4000.0,
+            "height": 800.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "PlayerSpawn",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 560.0,
+              "y": 640.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "SpawnComponent",
+          "fields": {
+            "spawner": "player"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ground",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 2000.0,
+              "y": 740.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": {
+            "width": 4000.0,
+            "height": 120.0,
+            "fillStyle": {
+              "color": 4281017408,
+              "blendMode": "modulate"
+            },
+            "strokeStyle": {
+              "color": 0,
+              "blendMode": "modulate"
+            },
+            "filled": true,
+            "strokeWidth": 1.0,
+            "cornerRadius": 0.0
+          }
+        },
+        {
+          "type": "Collider2DComponent",
+          "fields": {
+            "shape": "matchShape"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Torii",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 700.0,
+              "y": 596.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "SpriteComponent",
+          "fields": {
+            "spritePath": "assets/sprites/forest_torii.png",
+            "atlasPath": "",
+            "region": "",
+            "flipX": false,
+            "flipY": false,
+            "pixelArt": true
+          }
+        },
+        {
+          "type": "LayerComponent",
+          "fields": {
+            "layerId": "background",
+            "layer": -200,
+            "zOrder": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lantern",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 520.0,
+              "y": 642.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "SpriteComponent",
+          "fields": {
+            "spritePath": "assets/sprites/forest_lantern.png",
+            "atlasPath": "",
+            "region": "",
+            "flipX": false,
+            "flipY": false,
+            "pixelArt": true
+          }
+        },
+        {
+          "type": "LayerComponent",
+          "fields": {
+            "layerId": "background",
+            "layer": -200,
+            "zOrder": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lantern 2",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 880.0,
+              "y": 642.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "SpriteComponent",
+          "fields": {
+            "spritePath": "assets/sprites/forest_lantern.png",
+            "atlasPath": "",
+            "region": "",
+            "flipX": false,
+            "flipY": false,
+            "pixelArt": true
+          }
+        },
+        {
+          "type": "LayerComponent",
+          "fields": {
+            "layerId": "background",
+            "layer": -200,
+            "zOrder": 0
+          }
+        }
+      ]
+    }
+  ]
+}

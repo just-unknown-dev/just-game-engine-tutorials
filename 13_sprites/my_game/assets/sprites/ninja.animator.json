@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "atlas": "assets/sprites/player.json",
+  "entry": "idle",
+  "parameters": [
+    { "name": "speed", "type": "float", "binding": "speedX" },
+    { "name": "vy", "type": "float", "binding": "velocityY" },
+    { "name": "grounded", "type": "bool", "binding": "grounded" }
+  ],
+  "states": [
+    { "name": "idle" },
+    {
+      "name": "move",
+      "blend": {
+        "type": "1d",
+        "parameter": "speed",
+        "motions": [
+          { "clip": "run", "threshold": 80, "speed": 0.6 },
+          { "clip": "run", "threshold": 240, "speed": 1.2 }
+        ]
+      }
+    },
+    { "name": "jump" },
+    { "name": "fall" }
+  ],
+  "transitions": [
+    {
+      "from": "idle", "to": "move",
+      "conditions": [{ "param": "speed", "op": ">", "value": 20 }]
+    },
+    {
+      "from": "move", "to": "idle",
+      "conditions": [{ "param": "speed", "op": "<=", "value": 20 }]
+    },
+    {
+      "from": "*", "to": "jump",
+      "conditions": [
+        { "param": "grounded", "op": "==", "value": false },
+        { "param": "vy", "op": "<", "value": 0 }
+      ]
+    },
+    {
+      "from": "jump", "to": "fall",
+      "conditions": [{ "param": "vy", "op": ">=", "value": 0 }]
+    },
+    {
+      "from": "fall", "to": "idle",
+      "conditions": [{ "param": "grounded", "op": "==", "value": true }]
+    }
+  ]
+}
