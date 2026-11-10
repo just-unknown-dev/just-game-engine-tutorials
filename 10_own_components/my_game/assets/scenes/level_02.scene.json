@@ -1,0 +1,543 @@
+{
+  "version": 11,
+  "name": "level_02",
+  "mode": "2d",
+  "entities": [
+    {
+      "name": "MainCamera",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 2000.0,
+              "y": 400.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "VirtualCameraComponent",
+          "fields": {
+            "priority": 10,
+            "enabled": true,
+            "standbyUpdate": "never",
+            "follow": {
+              "tag": "player"
+            },
+            "zoom": 1.0,
+            "dutch": 0.0,
+            "projection": "orthographic",
+            "fieldOfView": 1.0471975511965976,
+            "nearClip": -10000.0,
+            "farClip": 10000.0
+          }
+        },
+        {
+          "type": "CameraFramingComponent",
+          "fields": {
+            "screenX": 0.0,
+            "screenY": 0.0,
+            "deadZoneWidth": 0.1,
+            "deadZoneHeight": 0.1,
+            "softZoneWidth": 0.8,
+            "softZoneHeight": 0.8,
+            "dampingX": 0.5,
+            "dampingY": 0.5,
+            "lookaheadTime": 0.0,
+            "lookaheadSmoothing": 0.3,
+            "followX": true,
+            "followY": true
+          }
+        },
+        {
+          "type": "CameraConfinerComponent",
+          "fields": {
+            "boundsName": "LevelBounds",
+            "damping": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "LevelBounds",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 2000.0,
+              "y": 400.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "CameraBoundsComponent",
+          "fields": {
+            "width": 4000.0,
+            "height": 800.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "PlayerSpawn",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 200.0,
+              "y": 400.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "SpawnComponent",
+          "fields": {
+            "spawner": "player"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Level Map",
+      "parentName": null,
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "LevelMapComponent",
+          "fields": {
+            "mapPath": "",
+            "inline": {
+              "format": 3,
+              "orientation": "orthogonal",
+              "tileWidth": 32,
+              "tileHeight": 32,
+              "tilesets": [
+                "builtin:basic_shapes.tileset.json"
+              ],
+              "nextLayerId": 2,
+              "layers": [
+                {
+                  "id": 1,
+                  "name": "Ground",
+                  "layerId": "main",
+                  "layer": 0,
+                  "collides": true,
+                  "cells": {
+                    "-1,0": "eJxjGAWjYBQMISCAhikDABYAAEE=",
+                    "0,0": "eJxjGAWjYBQMIBAgEaPrpQwAAFYgANE=",
+                    "1,0": "eJxjGAWjYAABK4MABh7MgAPsPmRMqnpqY8oAAIMnAjo=",
+                    "2,0": "eJxjGAWjYEQDASx4KOmnDAAArqAA8Q=="
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "ChildrenComponent",
+          "fields": {
+            "childIds": [
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Solid_0",
+      "parentName": "Level Map",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 1200.0,
+              "y": 352.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "LayerComponent",
+          "fields": {
+            "layerId": "main",
+            "layer": 0,
+            "zOrder": 0,
+            "mapLayer": 1
+          }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": {
+            "width": 32.0,
+            "height": 128.0,
+            "fillStyle": {
+              "color": 4283723386,
+              "blendMode": "modulate"
+            },
+            "strokeStyle": {
+              "color": 4287668649,
+              "blendMode": "modulate"
+            },
+            "filled": true,
+            "strokeWidth": 2.0,
+            "cornerRadius": 0.0
+          }
+        },
+        {
+          "type": "RigidBody2DComponent",
+          "fields": {
+            "bodyType": "static",
+            "mass": 0.0,
+            "layer": 0,
+            "collidesWith": null,
+            "isSensor": false,
+            "friction": 0.5,
+            "restitution": 0.0,
+            "gravityScale": 1.0,
+            "linearDamping": 0.05,
+            "angularDamping": 0.05,
+            "continuousCollision": false,
+            "canSleep": true,
+            "lockRotation": true,
+            "initialVelocity": {
+              "dx": 0.0,
+              "dy": 0.0
+            },
+            "initialAngularVelocity": 0.0,
+            "groupIndex": 0
+          }
+        },
+        {
+          "type": "Collider2DComponent",
+          "fields": {
+            "shape": "matchShape",
+            "size": {
+              "x": 64.0,
+              "y": 64.0
+            },
+            "radius": 32.0,
+            "height": 64.0,
+            "points": [
+              {
+                "dx": -32.0,
+                "dy": -32.0
+              },
+              {
+                "dx": 32.0,
+                "dy": -32.0
+              },
+              {
+                "dx": 32.0,
+                "dy": 32.0
+              },
+              {
+                "dx": -32.0,
+                "dy": 32.0
+              }
+            ],
+            "cornerRadius": 0.0,
+            "thickness": 2.0,
+            "loop": false,
+            "offset": {
+              "dx": 0.0,
+              "dy": 0.0
+            },
+            "rotation": 0.0,
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "oneWay": false,
+            "oneWayDirection": "fromAbove",
+            "reflectivity": 0.0,
+            "showDebugOutline": true
+          }
+        },
+        {
+          "type": "ParentComponent",
+          "fields": {
+            "parentId": 3,
+            "inheritTransform": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "my_game.spinner_0",
+      "parentName": "Level Map",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 320.0,
+              "y": 384.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": {
+            "width": 64.0,
+            "height": 64.0,
+            "fillStyle": {
+              "color": 4294276207,
+              "blendMode": "modulate"
+            },
+            "strokeStyle": {
+              "color": 1946157055,
+              "blendMode": "modulate"
+            },
+            "filled": true,
+            "strokeWidth": 1.0,
+            "cornerRadius": 0.0
+          }
+        },
+        {
+          "type": "SpinnerComponent",
+          "fields": {
+            "speed": 90.0,
+            "clockwise": true
+          }
+        },
+        {
+          "type": "LayerComponent",
+          "fields": {
+            "layerId": "main",
+            "layer": 0,
+            "zOrder": 0,
+            "mapLayer": 1
+          }
+        },
+        {
+          "type": "ParentComponent",
+          "fields": {
+            "parentId": 3,
+            "inheritTransform": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "my_game.spinner_1",
+      "parentName": "Level Map",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 608.0,
+              "y": 384.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": {
+            "width": 64.0,
+            "height": 64.0,
+            "fillStyle": {
+              "color": 4294276207,
+              "blendMode": "modulate"
+            },
+            "strokeStyle": {
+              "color": 1946157055,
+              "blendMode": "modulate"
+            },
+            "filled": true,
+            "strokeWidth": 1.0,
+            "cornerRadius": 0.0
+          }
+        },
+        {
+          "type": "SpinnerComponent",
+          "fields": {
+            "speed": 90.0,
+            "clockwise": true
+          }
+        },
+        {
+          "type": "LayerComponent",
+          "fields": {
+            "layerId": "main",
+            "layer": 0,
+            "zOrder": 0,
+            "mapLayer": 1
+          }
+        },
+        {
+          "type": "ParentComponent",
+          "fields": {
+            "parentId": 3,
+            "inheritTransform": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "my_game.spinner_2",
+      "parentName": "Level Map",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "fields": {
+            "position": {
+              "x": 896.0,
+              "y": 384.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
+        },
+        {
+          "type": "Rectangle2DComponent",
+          "fields": {
+            "width": 64.0,
+            "height": 64.0,
+            "fillStyle": {
+              "color": 4294276207,
+              "blendMode": "modulate"
+            },
+            "strokeStyle": {
+              "color": 1946157055,
+              "blendMode": "modulate"
+            },
+            "filled": true,
+            "strokeWidth": 1.0,
+            "cornerRadius": 0.0
+          }
+        },
+        {
+          "type": "SpinnerComponent",
+          "fields": {
+            "speed": 182.0,
+            "clockwise": true
+          }
+        },
+        {
+          "type": "LayerComponent",
+          "fields": {
+            "layerId": "main",
+            "layer": 0,
+            "zOrder": 0,
+            "mapLayer": 1
+          }
+        },
+        {
+          "type": "ParentComponent",
+          "fields": {
+            "parentId": 3,
+            "inheritTransform": true
+          }
+        }
+      ]
+    }
+  ],
+  "editor": {
+    "guides": [],
+    "bookmarks": {},
+    "modules": {}
+  }
+}
