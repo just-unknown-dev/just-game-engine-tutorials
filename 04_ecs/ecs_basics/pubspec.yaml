@@ -1,0 +1,25 @@
+name: ecs_basics
+description: "Episode 04 of the Just Game Engine tutorials: entities, components and systems."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.7
+  flutter: ">=3.47.1 <3.48.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # just_audio_engine registers a web plugin without depending on
+  # flutter_web_plugins; depending on it here keeps web builds compiling.
+  flutter_web_plugins:
+    sdk: flutter
+  just_game_engine: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
